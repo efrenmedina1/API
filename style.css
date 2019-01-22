@@ -1,4 +1,7 @@
 
+
+  
+
   
   .container {
     display: flex;
@@ -8,8 +11,10 @@
   .section {
     margin: 1rem;
     border: 3px solid lightblue;
-    width: 45%;
+    width: 39%;
     background: lavender;
+    border-radius: 80px;
+    padding: 20px;
   }
   
 body { 
