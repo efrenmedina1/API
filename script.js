@@ -1,4 +1,4 @@
-const app = document.getElementById('root');
+const app = document.getElementById('movieList');
 
 
 
@@ -14,6 +14,7 @@ request.onload = function () {
   var data = JSON.parse(this.response);
   if (request.status >= 1 && request.status < 250) {
     data.forEach (movie => {
+      console.log(movie)
       const card = document.createElement('div');
       card.setAttribute('class', 'section');
 
@@ -26,7 +27,7 @@ request.onload = function () {
       const h4 = document.createElement('h4');  
       h4.textContent = `Rating ${movie.rt_score}`;
 
-      const p = document.createElement('p');
+      const p = document.createElement(`p`);
       p.textContent = movie.description;
 
       
@@ -45,3 +46,14 @@ request.onload = function () {
 }
 
 request.send();
+
+// adding a button
+
+var button = document.createElement("button");
+button.innerHTML = "click me!";
+
+button.addEventListener("click", function() {
+  button.innerHTML = "You did it";
+});
+
+document.body.appendChild(button);
